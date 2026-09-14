@@ -6,7 +6,21 @@ The initial hardware target is the 25 mm × 25 mm ESP32-S3 Matrix board sold und
 
 This repository is intentionally evidence-first. A negative result is a valid result; fabricated, simulated-as-measured, or cherry-picked hardware evidence is not.
 
-Start with [`rag/INDEX.md`](rag/INDEX.md) and [`AGENTS.md`](AGENTS.md).
+Start with [`rag/INDEX.md`](rag/INDEX.md) and [`AGENTS.md`](AGENTS.md). For a clean development checkout, see [`DEVELOPMENT.md`](DEVELOPMENT.md).
+
+## Development foundation
+
+The v0 toolchain is pinned in `toolchain/versions.env`: ESP-IDF v6.1 for ESP32-S3, Python 3.12, and a single development-only Ruff pin. Host runtime tooling otherwise uses only the standard library.
+
+```sh
+python -m venv .venv
+# activate the virtual environment
+python tools/dev.py bootstrap
+python tools/dev.py check
+python tools/dev.py firmware-build
+```
+
+The firmware build uses Espressif's official pinned Docker image by default. No physical-hardware success is implied by a successful CI build.
 
 ## Research objective
 
