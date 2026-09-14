@@ -9,6 +9,31 @@ scope: project-wide
 
 The plan was reviewed to avoid two early mistakes: (1) building a pose classifier before proving an observable cross-board signal, and (2) assuming the reference schematic and post-frame LED-probe behavior are true on the purchased modules. The improved plan therefore front-loads hardware identity, telemetry integrity, controls, and falsifiable feasibility gates.
 
+## GitHub issue map
+
+Each roadmap item has a self-contained autonomous implementation/research prompt. The issue plus the normative RAG documents it references are the execution contract.
+
+| ID | GitHub issue |
+|---|---|
+| ETP-001 | [#2](https://github.com/techrote/ESPtelepathy/issues/2) |
+| ETP-002 | [#3](https://github.com/techrote/ESPtelepathy/issues/3) |
+| ETP-003 | [#4](https://github.com/techrote/ESPtelepathy/issues/4) |
+| ETP-004 | [#5](https://github.com/techrote/ESPtelepathy/issues/5) |
+| ETP-005 | [#6](https://github.com/techrote/ESPtelepathy/issues/6) |
+| ETP-006 | [#7](https://github.com/techrote/ESPtelepathy/issues/7) |
+| ETP-007 | [#8](https://github.com/techrote/ESPtelepathy/issues/8) |
+| ETP-008 | [#9](https://github.com/techrote/ESPtelepathy/issues/9) |
+| ETP-009 | [#10](https://github.com/techrote/ESPtelepathy/issues/10) |
+| ETP-010 | [#11](https://github.com/techrote/ESPtelepathy/issues/11) |
+| ETP-011 | [#12](https://github.com/techrote/ESPtelepathy/issues/12) |
+| ETP-012 | [#13](https://github.com/techrote/ESPtelepathy/issues/13) |
+| ETP-013 | [#14](https://github.com/techrote/ESPtelepathy/issues/14) |
+| ETP-014 | [#15](https://github.com/techrote/ESPtelepathy/issues/15) |
+| ETP-015 | [#16](https://github.com/techrote/ESPtelepathy/issues/16) |
+| ETP-016 | [#17](https://github.com/techrote/ESPtelepathy/issues/17) |
+| ETP-017 | [#18](https://github.com/techrote/ESPtelepathy/issues/18) |
+| ETP-018 | [#19](https://github.com/techrote/ESPtelepathy/issues/19) |
+
 ## Phase 0 — trustworthy substrate
 
 | ID | Deliverable | Depends on |
