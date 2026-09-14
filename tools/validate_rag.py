@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Minimal dependency-free structural validation for ESPtelepathy RAG docs."""
 
-import re
-import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
