@@ -9,7 +9,9 @@ scope: firmware
 
 ## Platform
 
-Primary target: ESP-IDF with a repository-pinned supported version. Prefer native drivers/components for touch sensing, ESP-NOW/Wi-Fi, RMT or equivalent accurately timed LED/probe generation, timers, USB/serial logging, and I2C/QMI8658C access.
+Primary target: ESP-IDF with a repository-pinned supported version. **ETP-001 pins ESP-IDF v6.1 for the v0 baseline in `toolchain/versions.env`**, using Espressif's official versioned Docker image for CI/default reproducible builds. Change the major/minor baseline only through an explicit migration PR with successful firmware CI.
+
+Prefer native drivers/components for touch sensing, ESP-NOW/Wi-Fi, RMT or equivalent accurately timed LED/probe generation, timers, USB/serial logging, and I2C/QMI8658C access.
 
 ## Components
 

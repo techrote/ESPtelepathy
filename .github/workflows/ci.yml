@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  host:
+    name: host-checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: host/requirements-dev.txt
+      - name: Install pinned development tools
+        run: python -m pip install --disable-pip-version-check -r host/requirements-dev.txt
+      - name: RAG, lint, and host tests
+        run: python tools/dev.py check
+
+  firmware:
+    name: firmware-esp32s3
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build with pinned official ESP-IDF image
+        run: python tools/dev.py firmware-build

@@ -29,6 +29,15 @@ Verified from the current Waveshare docs/schematic during planning: 25 mm × 25 
 
 Relevant manufacturer facts: ESP32-S3 has 14 external touch GPIOs, GPIO1-14; only TOUCH14 can drive the shield electrode; Espressif recommends a 470 Ω–2 kΩ series resistor (510 Ω preferred starting point) in purpose-designed touch circuits; proximity sensing accumulates scans because the effect is small; the internal denoise channel and filtering are available; touch has limited interference immunity and must be empirically characterized.
 
+## Build toolchain
+
+- ESP-IDF v6.1 release: https://github.com/espressif/esp-idf/releases/tag/v6.1
+- ESP-IDF v6.1 documentation: https://docs.espressif.com/projects/esp-idf/en/v6.1/
+- Espressif IDF Docker image documentation: https://docs.espressif.com/projects/esp-idf/en/v6.1/esp32s3/api-guides/tools/idf-docker-image.html
+- Official image tags: https://hub.docker.com/r/espressif/idf/tags
+
+ETP-001 pins `espressif/idf:v6.1` as the v0 build environment. The pin is a reproducibility decision, not evidence about the target hardware.
+
 ## QMI8658C
 
 - QST QMI8658C datasheet: https://qstcorp.com/upload/pdf/202202/QMI8658C%20datasheet%20rev%200.9.pdf
